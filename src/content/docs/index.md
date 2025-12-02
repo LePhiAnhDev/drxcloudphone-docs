@@ -111,7 +111,7 @@ Nếu IP iPhone là `100.64.0.1` (lấy từ Bước 2.4), bạn nhập:
 http://100.64.0.1:5801
 ```
 
-3. Trang noVNC sẽ hiển thị → Nhấn nút **Connect**
+3. Trang noVNC sẽ hiển thị → Nhấn nút **Click here to connect using noVNC**
 
 4. Nhập **mật khẩu** bạn đã đặt ở Bước 3 → Nhấn **Enter**
 
