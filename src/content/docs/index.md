@@ -15,7 +15,7 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
 
 ### Tải Ứng Dụng
 
-- **iPhone**: [DrXCloudPhone](https://drive.google.com/drive/folders/18McJIBWIWjbC_E3XD3S5nXbe7dyNcCyJ?usp=sharing)
+- **iPhone**: [DrXCloudPhone](https://transfer.it/t/yup24N1FUTQI)
 - **PC**: [Tailscale](https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe)
 
 ---
@@ -80,7 +80,8 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
 1. Liên hệ admin, cung cấp **Serial Number** để admin cấp key kích hoạt
 2. Cách lấy **Serial Number**: 
    - Settings (Cài đặt) → General (Cài đặt chung) → About (Giới thiệu) → Lấy giá trị tại mục Serial Number (Số sê-ri)
-3. Sau khi nhận key từ admin:
+3. Sau khi nhận file key từ admin:
+   - Mở file và sao chép toàn bộ nội dung key
    - Vào app DrXCloudPhone
    - Điền chính xác key vào mục **Enter your license key**
    - Ấn **Confirm**
