@@ -47,12 +47,54 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
 
 ---
 
-### Bước 3: Khởi Động DrXCloudPhone App (Trên iPhone)
+### Bước 3: Cài Đặt DrXCloudPhone App Trên iPhone
 
-1. Đảm bảo đã tải và cài đặt app **DrXCloudPhone** từ link trên
-2. Mở app **DrXCloudPhone** → Cấu hình các thông số:
+#### 3.1. Phương Thức Cài Đặt
 
-**Cài đặt cơ bản (Bắt buộc):**
+**Option A: TrollStore - `.tipa` (Khuyến Nghị)**
+
+- iOS: 14.0+
+- Yêu cầu: TrollStore đã cài ([Guide](https://ios.cfw.guide/installing-trollstore/))
+- Jailbreak: Không cần
+
+**Option B: Esign, AltStore, Sideloadly - `.ipa` (Backup)**
+
+- File: Đổi `.tipa` → `.ipa`
+- iOS: 14.0+
+- Jailbreak: Không cần
+
+#### 3.2. Cài Đặt Qua TrollStore (Khuyến Nghị)
+
+```
+1. Mở TrollStore app
+2. Tap "+"
+3. Chọn "Install IPA File"
+4. Navigate → Tap DrXCloudPhone_2.7.tipa
+5. Chờ 3-10 giây
+6. Ấn vào app → Open
+7. Done! Icon xuất hiện trên Home Screen
+```
+
+#### 3.3. Kích Hoạt App
+
+1. Liên hệ admin, cung cấp **Serial Number** để admin cấp key kích hoạt
+2. Cách lấy **Serial Number**: 
+   - Settings (Cài đặt) → General (Cài đặt chung) → About (Giới thiệu) → Lấy giá trị tại mục Serial Number (Số sê-ri)
+3. Sau khi nhận key từ admin:
+   - Vào app DrXCloudPhone
+   - Điền chính xác key vào mục **Enter your license key**
+   - Ấn **Confirm**
+   - Nếu thành công sẽ truy cập được vào app
+
+✅ **Hoàn tất**: DrXCloudPhone đã cài đặt và kích hoạt thành công
+
+---
+
+### Bước 4: Cấu Hình DrXCloudPhone App
+
+Mở app **DrXCloudPhone** → Cấu hình các thông số:
+
+#### 4.1. Cài Đặt Cơ Bản (Bắt Buộc)
 
 - **Enable**: Gạt sang **ON** (màu xanh)
 - **TCP Port**: Giữ nguyên `5901`
@@ -61,7 +103,7 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
   - Ghi nhớ mật khẩu này - bạn sẽ cần nhập khi kết nối
 - **HTTP Port**: Đặt là `5801` *(Rất quan trọng - phải là 5801)*
 
-**Cài đặt tối ưu hiệu năng (Khuyến nghị):**
+#### 4.2. Cài Đặt Tối Ưu Hiệu Năng (Khuyến Nghị)
 
 *(Dành cho PC cấu hình trung bình trở lên)*
 
@@ -72,7 +114,7 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
 - **Tile Size (PX)**: Đặt `16`
 - **Non-blocking Swap**: Bật **ON**
 
-**Lưu ý quan trọng:**
+#### 4.3. Lưu Ý Quan Trọng
 
 - Tắt **Chế độ Tiết kiệm Pin** (Low Power Mode) trên iPhone
 - Đảm bảo iPhone đang sạc pin hoặc có pin >50%
@@ -82,7 +124,7 @@ description: Hướng dẫn kết nối và điều khiển iPhone từ xa trên
 
 ---
 
-### Bước 4: Kết Nối iPhone Trên PC (Qua Trình Duyệt)
+### Bước 5: Kết Nối iPhone Trên PC (Qua Trình Duyệt)
 
 1. Trên PC, mở trình duyệt web (**Chrome** / **Edge** / **Firefox**)
 
@@ -102,20 +144,22 @@ http://100.85.10.1:5801
 
 3. Trang noVNC sẽ hiển thị → Nhấn nút **Click here to connect using noVNC**
 
-4. Nhập **mật khẩu** bạn đã đặt ở Bước 3 → Nhấn **Send Credentials** hoặc **Enter**
+4. Nhập **mật khẩu** bạn đã đặt ở Bước 4 → Nhấn **Send Credentials** hoặc **Enter**
 
 5. 🎉 **Thành công**: Màn hình iPhone hiển thị ngay trên trình duyệt
 
-### Cách Điều Khiển iPhone
+---
 
-**Thao tác chuột:**
+## Cách Điều Khiển iPhone
+
+### Thao Tác Chuột
 
 - **Click chuột trái**: Chạm vào màn hình (tap)
 - **Cuộn chuột (scroll wheel)**: Cuộn trang lên/xuống
 - **Click chuột phải**: Mở menu ngữ cảnh hoặc chức năng đặc biệt
 - **Kéo thả (drag)**: Giữ chuột trái và di chuyển
 
-**Thao tác bàn phím:**
+### Thao Tác Bàn Phím
 
 - **Bàn phím**: Hỗ trợ đầy đủ, bao gồm các phím chức năng và phím tắt
 - **Âm lượng**: Sử dụng phím tăng/giảm âm lượng trên bàn phím PC
@@ -130,19 +174,21 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 
 **Cách thiết lập:**
 
-1. **Trên mỗi iPhone:**
-   - Cài Tailscale → Đăng nhập **cùng tài khoản** Google/Email
-   - Cài DrXCloudPhone → Đặt **HTTP Port = 5801**
-   - Mỗi iPhone sẽ có **IP riêng**, ví dụ:
-     - iPhone 1 → `100.85.10.1`
-     - iPhone 2 → `100.85.10.2`
-     - iPhone 3 → `100.85.10.3`
+**Trên mỗi iPhone:**
 
-2. **Trên PC:**
-   - Mở nhiều tab trình duyệt
-   - **Tab 1**: Truy cập `http://100.85.10.1:5801` → Điều khiển iPhone 1
-   - **Tab 2**: Truy cập `http://100.85.10.2:5801` → Điều khiển iPhone 2
-   - **Tab 3**: Truy cập `http://100.85.10.3:5801` → Điều khiển iPhone 3
+- Cài Tailscale → Đăng nhập **cùng tài khoản** Google/Email
+- Cài DrXCloudPhone → Đặt **HTTP Port = 5801**
+- Mỗi iPhone sẽ có **IP riêng**, ví dụ:
+  - iPhone 1 → `100.85.10.1`
+  - iPhone 2 → `100.85.10.2`
+  - iPhone 3 → `100.85.10.3`
+
+**Trên PC:**
+
+- Mở nhiều tab trình duyệt
+- **Tab 1**: Truy cập `http://100.85.10.1:5801` → Điều khiển iPhone 1
+- **Tab 2**: Truy cập `http://100.85.10.2:5801` → Điều khiển iPhone 2
+- **Tab 3**: Truy cập `http://100.85.10.3:5801` → Điều khiển iPhone 3
 
 ✅ **Kết quả**: Bạn có thể làm việc song song trên nhiều iPhone, hoàn toàn độc lập
 
@@ -150,7 +196,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 
 ## Xử Lý Sự Cố Thường Gặp
 
-### 1. Không kết nối được (Lỗi "Connection Failed")
+### 1. Không Kết Nối Được (Lỗi "Connection Failed")
 
 **Nguyên nhân & Giải pháp:**
 
@@ -168,7 +214,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
   - ✅ Tạm thời tắt Windows Firewall để kiểm tra
   - ✅ Thêm rule cho phép port 5801 trong firewall
 
-### 2. Kết nối được nhưng màn hình lag, giật
+### 2. Kết Nối Được Nhưng Màn Hình Lag, Giật
 
 **Giải pháp:**
 
@@ -179,7 +225,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 - Đóng các tab/app khác trên PC để giải phóng RAM
 - Giảm **Tile Size** xuống `8` nếu vẫn lag
 
-### 3. Bị ngắt kết nối liên tục
+### 3. Bị Ngắt Kết Nối Liên Tục
 
 **Giải pháp:**
 
@@ -188,7 +234,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 - Kiểm tra kết nối internet ổn định ở cả 2 thiết bị
 - Vào **Settings** trên iPhone → **Display & Brightness** → **Auto-Lock** → Chọn **Never**
 
-### 4. Nhập mật khẩu đúng nhưng vẫn báo sai
+### 4. Nhập Mật Khẩu Đúng Nhưng Vẫn Báo Sai
 
 **Giải pháp:**
 
@@ -197,7 +243,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 - Khởi động lại app DrXCloudPhone
 - Đảm bảo mật khẩu không có ký tự đặc biệt gây xung đột
 
-### 5. Không tìm thấy IP của iPhone
+### 5. Không Tìm Thấy IP Của iPhone
 
 **Giải pháp:**
 
@@ -239,6 +285,7 @@ Bạn có thể kết nối và điều khiển **nhiều iPhone** từ 1 PC, m�
 ## Hỗ Trợ & Liên Hệ
 
 Nếu gặp vấn đề không thể giải quyết, vui lòng:
+
 - Kiểm tra lại từng bước trong hướng dẫn
 - Xem phần **Xử Lý Sự Cố** phía trên
 - Liên hệ nhà phát triển DrXCloudPhone để được hỗ trợ
